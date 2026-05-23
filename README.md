@@ -1,1 +1,1 @@
-This repo contains the yocto setup needed to build image for TI AM62 EVK board bring up.
+This repo contains the yocto setup needed to build image for Haridwar board bring up.
