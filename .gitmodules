@@ -2,3 +2,7 @@
 	path = src/poky
 	url = https://git.yoctoproject.org/git/poky
 	branch = scarthgap
+[submodule "src/meta-ti"]
+	path = src/meta-ti
+	url = https://git.yoctoproject.org/meta-ti
+	branch = scarthgap
