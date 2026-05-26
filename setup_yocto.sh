@@ -1,1 +1,0 @@
-TEMPLATECONF=../src/meta-haridwar/conf/templates/haridwar source src/poky/oe-init-build-env
