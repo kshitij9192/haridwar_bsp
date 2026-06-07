@@ -1,7 +1,7 @@
 This repo contains the yocto setup needed to build image for Haridwar board bring up.
 
-
-##Logs received from bitbake-build setup
+#To invoke initial setup
+./bitbake/bin/bitbake-setup init --non-interactive base.conf.json haridwarconf kkdistro machine/haridwar-board
 
 Setting up bitbake configuration in
     /home/kshitij/src/haridwar_bsp/bitbake-builds/poky-wrynose/build
