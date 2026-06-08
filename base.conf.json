@@ -1,11 +1,12 @@
 {
     "description": "Base repositories for bitbake build",
+    "version": "1.0",
     "sources": {
         "bitbake": {
             "git-remote": {
                 "uri": "https://git.openembedded.org/bitbake",
-                "branch": "2.8",
-                "rev": "2.8"
+                "branch": "2.18",
+                "rev": "2.18"
             },
             "path": "bitbake"
         },
@@ -17,24 +18,32 @@
             }
         },
         "meta-yocto": {
+            "git-remote": {
                 "uri": "https://git.yoctoproject.org/meta-yocto",
                 "branch": "wrynose",
                 "rev": "8251bdad5fda780a000fb41e6eda82eadf0fa39e"
+            }
         },
         "meta-haridwar": {
-            "uri": "https://github.com/kshitij9192/meta-haridwar",
-            "branch": "main",
-            "rev": "main"
+            "git-remote": {
+                "uri": "https://github.com/kshitij9192/meta-haridwar",
+                "branch": "main",
+                "rev": "main"
+            }
         },
         "meta-ti": {
+            "git-remote": {
                 "uri": "https://git.yoctoproject.org/meta-ti",
                 "branch": "wrynose",
                 "rev": "50756d15542f9c2e528f3ffcecd48d0adb4fee68"
+            }
         },
         "meta-arm": {
-            "uri": "https://git.yoctoproject.org/meta-arm",
-            "branch": "wrynose",
-            "rev": "d3b55902fb9963978be90d6f283296de456b4b63"
+            "git-remote": {
+                "uri": "https://git.yoctoproject.org/meta-arm",
+                "branch": "wrynose",
+                "rev": "d3b55902fb9963978be90d6f283296de456b4b63"
+            }
         }
     },
     "bitbake-setup": {
@@ -42,22 +51,9 @@
             {
                 "name": "haridwarconf",
                 "description": "Bitbake setup for Haridwar",
-                "setup-dir-name": "build-$machine",
+                "setup-dir-name": "build-haridwar",
                 "bb-layers": ["openembedded-core/meta", "meta-haridwar"],
-                "oe-fragments-one-of": {
-                    "machine": {
-                        "description": "Target machines",
-                        "options": [
-                            {"name": "machine/haridwar-board", "description": "Haridwar Embedded Board"}
-                        ]
-                    },
-                    "distro": {
-                        "description": "Target Distributions",
-                        "options": [
-                            {"name": "kkdistro", "description": "KK Distro for embedded systems"}
-                        ]
-                    }
-                }
+                "oe-fragments": ["machine/haridwar", "distro/kkdistro"]
             }
         ]
     }
